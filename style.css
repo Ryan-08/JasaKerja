@@ -6,8 +6,7 @@
 
 body{
     background-color:   #f5deb3;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0px 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
 }
 
 button{
@@ -23,15 +22,20 @@ ul{
     list-style: none;
 }
 
+img{
+  pointer-events: none;
+  width: 100%;    
+}
+
 .navbar{
-    height: 15vh;
+    height: 10vh;
     max-width: 100%;
     background-color: #f5deb3;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10px;
+    padding: 5px 5px;    
 }
 .navbar a{
     color: #990000;
@@ -42,6 +46,11 @@ ul{
     color: black;
 }
 
+.Logo{
+  height: 100%;
+  padding: 10px;
+}
+
 .brand{
     display: inline-block;    
     margin-left: 20px;
@@ -50,13 +59,12 @@ ul{
 
 .Nav {
     flex-basis: 100%;  
-    margin-right: 10%;          
+    margin-right: 10%;  
+    height: 100%;     
 }
 
 .login-nav{     
-    width: 30%; 
-    height: 100%;   
-    padding: 20px;
+    width: 30%;         
 }
 
 .myNav{
@@ -64,25 +72,23 @@ ul{
     flex-direction: row;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none;
+    list-style: none; 
+    height: 100%;  
+    padding: 20px; 
 }
 
-.nav-item{    
+
+.nav-item, .login-item{    
     flex-grow: 1;    
     text-align: center;
     font-size: 2vw;
     font-weight: bold;
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: transparent;    
 }
 .login-item{    
-    flex-grow: 1;    
-    text-align: center;
-    font-size: 2vw;  
-    background-color: transparent;  
-    border: none;
-    outline: none;
+    font-weight: normal;
 }
 
 .login-item:hover{    
@@ -90,9 +96,14 @@ ul{
     cursor: pointer;
 }
 
-.main-content{    
-    height: 80vh;
+.main-content{        
     padding: 50px 90px;
+    margin-bottom: 30px;
+}
+.main-content:after{
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .section{
@@ -100,8 +111,7 @@ ul{
     width: 50%;  
 }
 
-.section h1{
-    font-size: 40px;
+.section h1{    
     color: #990000;
     padding: 0;
     margin: 0;
@@ -111,62 +121,50 @@ ul{
     padding-top: 50px;
 }
 
-.main-content:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 600px) {
-    .section {
-      width: 100%;
-    }
-  }
-
   .myButton{
-      display: flex;
-      justify-content: space-between;
-      margin-top: 2rem;
       width: 70%;
+      display: flex;      
+      justify-content: space-between;
+      margin-top: 20px;  
   }
 
-  .jasaBtn{      
-    background-color: red; 
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 20px 55px;
+  .myButton a{
+    color: black;
+    border-radius: 10px; 
+    padding: 1vw 4vw;
     text-align: center;
     text-decoration: none;    
     font-size: 16px;
+    margin: 10px;
+    font-weight: 500;
   }
-  .jasaBtn:hover{
-    background-color:transparent;
-    border: 2px solid red;
+
+  .myButton #loker{
+    background-color: red;
+    border: 2px solid red;   
   }
-  .jobBtn{      
-      background-color: transparent;    
-    border: 2px solid red;
-    color: white;
-    border-radius: 10px;
-    padding: 20px 40px;
-    text-align: center;
-    text-decoration: none;    
-    font-size: 16px;
+
+  .myButton #loker:hover{
+    background-color: transparent;    
+    border: 2px solid red;   
   }
-  .jobBtn:hover{
-    background-color:red;
+
+  .myButton #jasa{
+    background-color: transparent;    
+    border: 2px solid red;   
   }
+
+  .myButton #jasa:hover{
+    background-color: red;        
+  }  
 
 .desc-section{
     margin-top: 3rem;
     width: 70%;
 }
 
-img{
-    pointer-events: none;
-    width: 40vw;
-    height: 50vh;
+.section p{
+ font-size: 20px;
 }
 
 .right{    
@@ -218,4 +216,39 @@ img{
   
   .show {
     display: block;
+  }
+
+  .footer{
+    position: fixed;    
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center; 
+    height: 5vw;                 
+  }
+
+  .footer h4{
+    padding: 1vw;
+  }
+
+  @media screen and (max-width:720px) { 
+    body{
+        font-size: 16px;
+    }   
+    .main-content{
+        padding: 30px 60px;
+    }
+    .section {
+      width: 100%;
+      font-size: 4vw;      
+    }       
+    
+    .myButton a{
+      font-size: 3vw;
+    }
+    .desc-section p{
+      font-size: 4vw;
+     }
+     
   }
